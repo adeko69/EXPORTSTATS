@@ -13,6 +13,9 @@ At the opposite from EXPORTSTATS.jar, calc is used to calculate things (lol)
 `lootbugsAlone`: Calculate the second between lootbugs without bear drone and (golden) lantern
 `lootbugsWithBear`-`lootbugsWithLantern`-`lootbugsWithGolden` and the other possibility: Calculate when bear drone (fueled) and lantern is active. Cancel Bear if active, but not Lantern
 
+## Stonks
+`true_stonks` - `true_super_stonks` - `true_ultra_stonks`: Show the true chance of hitting a stonks. Stonks is hidden.
+
 ## Veins
 `zone_vein` - `world_vein`: Show the chance of getting a vein, without double veins and without veinseeker
 `zone_veinseeker` - `world_veinseeker`: Show the chance of getting a vein, without double veins and with veinseeker
@@ -31,3 +34,6 @@ At the opposite from EXPORTSTATS.jar, calc is used to calculate things (lol)
 `duration_until_max`: The number of tick until having the drone fully maxed (Ignore grade cap not unlocked)
 `duration`: The number of second gave by the drone
 `experience_until_max`: How many experience you need to max grade.
+
+## Void Drone
+`true_void_portal` - `true_golde_void_portal` - `true_rainbow_void_portal` - `true_galactic_void_portal`: Show the true chance of hitting a stonks. Base Void Portal is hidden.
