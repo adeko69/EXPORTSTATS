@@ -7,6 +7,9 @@ The objective is to give the Player an access to their data and everything linke
 ## Current Progress
 Preparing for Calc big upgrade when Alex will agrees to add more Stats in the JSON (Come on add Obelisk Level at least)
 
+In dev: 2.2.6-1
+Currently on the github: 2.2.6
+
 ## How it works
 
 ### Read Json
@@ -65,6 +68,8 @@ You can use EXPORTSTATS.EXPORTSTATS for locating or sending the result (as of io
 `String getString(Stats st)`: This method calls a value of a Stats into a Stringified text. `precision` can change the Stringified text.
 
 `String getRaw(Stats st)`: Sends the Stringified version of the json. It will remove the information of the statues (if it is platined, gilded, base) and keep the number (0.0,1.0,2.0,3.0)
+
+`Integer getRawInt(Stats st)`: Make the Raw result an Int, if it's a Long or a double.
 
 `Object getCalc(Calc c)`: Grab the value of the Calculation among the one available.
 
