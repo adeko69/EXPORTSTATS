@@ -5,7 +5,7 @@ A IDLE OBELISK MINER "EXPORTSTATS" json reader for Java
 The objective is to give the Player an access to their data and everything linked to their account BY ONLY THE WAY OF THE OFFICIAL JSON.
 
 ## Current Progress
-Wait for more stats to continue. Code will be mainly adding small feature rather than directly useful element.
+Preparing for Calc big upgrade when Alex will agrees to add more Stats in the JSON (Come on add Obelisk Level at least)
 
 ## How it works
 
@@ -66,6 +66,13 @@ You can use EXPORTSTATS.EXPORTSTATS for locating or sending the result (as of io
 
 `String getRaw(Stats st)`: Sends the Stringified version of the json. It will remove the information of the statues (if it is platined, gilded, base) and keep the number (0.0,1.0,2.0,3.0)
 
+`Object getCalc(Calc c)`: Grab the value of the Calculation among the one available.
+
+### Calculations
+To avoid the player to calculate things, the code helps you.
+
+`void calculateAll()`: **CAN LAG**, calculate every possibilities, based if calculation is possible or not. As of 2.2.6-1, there are 33 calculations.
+
 ### Parameters
 
 `void setExportLocation(String s)` Choose from where will be the exported bdeko. Base value is in `/EXPORTDATA`.
@@ -92,6 +99,8 @@ You can use EXPORTSTATS.EXPORTSTATS for locating or sending the result (as of io
 
 `String getText(Stats st)`: if LanguageManage is set correctly, will check for `st.name()` in the `stats.bdeko` file of the selected language. Base one are the same as the codename.
 `String getTextDesc(Stats st)`: if LanguageManage is set correctly, will check for `st.name()`+`_desc` in the `stats.bdeko` file of the selected language. Sends the description. Base one are taken from the Wiki.
+`String getText(Calc c)`: if LanguageManage is set correctly, will check for `c.name()` in the `calc.bdeko` file of the selected language. Base one are the same as the codename.
+`String getTextDesc(Calc c)`: if LanguageManage is set correctly, will check for `c.name()`+`_desc` in the `calc.bdeko` file of the selected language. Sends the description. Base one are made by me
 
 > [!NOTE]
 > Localisation module is for now limited. Adding entry is for now limited
