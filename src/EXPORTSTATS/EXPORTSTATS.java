@@ -1,5 +1,6 @@
 package EXPORTSTATS;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,6 +16,9 @@ import adeko.types.ShortDate;
 public class EXPORTSTATS {
     static String exported = "EXPORTDATA";
     public static Restore r;
+    public static Restore calc;
+
+    //PRECISION CUT THE DECIMAL PLACES OF THE NUMBERS, -1 = NO CUT
     public static int precision = 3;
 
     public static void showScience(boolean set){
@@ -30,6 +34,29 @@ public class EXPORTSTATS {
     public static void setLanguageManage(String path, String language){
         LanguageManage.setPath(path);
         LanguageManage.setLanguage(language);
+    }
+
+    public static void calculateAll(){
+        if(r == null) {System.out.println("Erreur: Pas de Restore"); return;}
+
+        for(Calc c : Calc.values()) {
+            if(c.tag.show && c.show) {
+                getCalc(c);
+            }
+        }
+    }
+
+    public static Object getCalc(Calc c){
+        if(calc == null) return null;
+        Object cached = calc.get(c.toString());
+        if (cached != null) return cached;
+        if (!c.tag.show || !c.show) return null;
+
+        Object computed = c.setAndStore(c.calculate());
+        if (computed != null) {
+            calc.add(c.toString(), computed, c.tag.name());
+        }
+        return computed;
     }
 
     public static List<String> getAllData(){
@@ -54,7 +81,7 @@ public class EXPORTSTATS {
     }
 
     public static String getString(Stats st){
-        Object o = r.get(st.toString());
+        Object o = getRaw(st);
         if (o == null) return ""; 
 
         if(o instanceof Boolean) return ((Boolean) o).toString();
@@ -113,8 +140,70 @@ public class EXPORTSTATS {
         return numberStr;
     }
 
-    public static String getRaw(Stats st){
-        return r.get(st.toString()).toString();
+    public static Object getRaw(Stats st){
+        if(st.value == null) st.value = r.get(st.toString());
+        return st.value;
+    }
+
+    public static Object getRaw(Calc c){
+        return calc.get(c.toString());
+    }
+
+    final String hardcoded_version = "2.2.6";
+
+    public static String loadingText(){
+        return "Loading a lot of elements!"+"\n"+
+                "Converting "+Stats.values().length + " elements into a special file...\n"+
+                "Calculating less than "+Calc.ESTIMATED_AMOUNT + " elements...\n"+
+                "Ignoring a lot of the calculation! (95% at 0.0% of progression in game)\n"+
+                "This loading screen is quicker for beginners!";
+    }
+
+    public static String getString(Calc c){
+        Object o = getRaw(c);
+        if (o == null) return ""; 
+
+        if(o instanceof Boolean) return ((Boolean) o).toString();
+        
+        // 1. On stocke la valeur sous forme de BigDecimal pour garder 100% de la précision
+        java.math.BigDecimal bd = null;
+        if (o instanceof java.math.BigDecimal bdValue) bd = bdValue;
+        else if (o instanceof Double dValue) bd = java.math.BigDecimal.valueOf(dValue);
+        else if (o instanceof Integer iValue) bd = java.math.BigDecimal.valueOf(iValue);
+        else if (o instanceof Long lValue) bd = java.math.BigDecimal.valueOf(lValue);
+
+        String valueString = o.toString();
+        String name = c.name();
+
+        if (bd != null && precision > -1) {
+            valueString = Notation.getBestNotation(bd);
+        }
+
+        if(name.endsWith("_multi") || c == Calc.star_chance_per_floor) return valueString+"x";
+        if(name.startsWith("true_") && !name.contains("pickaxe_damage") || c == Calc.radiant_supernova_supergiant_star || c == Calc.rainbow_veins_rainbow_portal_rainbow_floor) return valueString+"%";
+        if((name.startsWith("zone") || name.startsWith("world")) && (name.endsWith("veinseeker") || name.endsWith("vein") || name.endsWith("_double"))) return valueString+"%";
+        if(name.startsWith("lootbugs")) return valueString+"s";
+
+
+
+        return valueString;
+    }
+
+    public static Integer getRawInt(Stats st){
+        Object o = getRaw(st);
+        if(o instanceof Integer i) return i;
+        if(o instanceof Double d) return d.intValue();
+        if(o instanceof Long l) return l.intValue();
+        return null;
+    }
+
+    public static Double getRawDouble(Stats st){
+        Object o = getRaw(st);
+        if(o instanceof Double d) return d;
+        if(o instanceof Double i) return i.doubleValue();
+        if(o instanceof Long l) return l.doubleValue();
+        if(o instanceof BigDecimal db) return db.doubleValue();
+        return null;
     }
 
     public static String getText(Stats st){
@@ -160,9 +249,23 @@ public class EXPORTSTATS {
         return elementInData.contains(x+".bdeko");
     }
 
+    public static String getText(Calc c){
+        return Texts.getText("calc", c.toString());
+    }
+
+    public static String getTextDesc(Calc c){
+        return Texts.getText("calc", c.toString()+"_desc");
+    }
+
+    public static void loadRestore(int x){
+        r = new Restore(exported+"/"+x+".bdeko");
+    }
+
     public static void load(int x){
         Notation.scientificNotation = new Restore("settings.bdeko").getB("scientific");
-        r = new Restore(exported+"/"+x+".bdeko");
+        if(r == null) loadRestore(x);
+        Calc.load(x);
+        if(!calc.exists()) calculateAll();
         if(!r.exists()) {r = null; return;}
         if(r.check("precision")) precision = (int) r.get("precision");
     }
@@ -172,4 +275,5 @@ public class EXPORTSTATS {
         r.replace("precision", setPrecision, "auto");
         precision = setPrecision;
     }
+
 }

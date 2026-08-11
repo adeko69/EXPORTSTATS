@@ -41,17 +41,17 @@ public enum Stats {
     pickaxe_crit_chance(TagList.Pickaxe),time(TagList.Others),fishing_tick_reduction_seconds(TagList.Fishing),prestige_point_multi(TagList.Prestige),fishing_rod_power(TagList.Fishing),
     gleaming_vein_multi(TagList.Veins),bomb_ultra_crit_chance(TagList.Bombs),bomb_cap_multiplier(TagList.Bombs),stonks_chance(TagList.Chests),gem_upgrade_cap_increase(TagList.Misc),
     lootfrog_lanterns_used(TagList.Lootbugs),lootbug_loot_multi(TagList.Lootbugs),artifact_cap_increase(TagList.Prestige),lootbug_spawn_rate(TagList.Lootbugs),
-    pickaxe_ultra_crit_chance(TagList.Pickaxe),rainbow_floor_chance(TagList.Ore),bar_upgrade_cost_reduction(TagList.Ore),steak_eaten(TagList.Ore),star_spawn_rate(TagList.Stars),
+    pickaxe_ultra_crit_chance(TagList.Pickaxe),rainbow_floor_chance(TagList.Ore),bar_upgrade_cost_reduction(TagList.Crafting),steak_eaten(TagList.Ore),star_spawn_rate(TagList.Stars),
     freebie_bank_cap(TagList.Chests),coal_drone_exp_multi(TagList.Drones),drone_attack_speed_percent(TagList.Drones),coal_fuel_save_chance(TagList.Drones),
     bomb_capacity(TagList.Bombs),drone_triple_damage_chance(TagList.Drones),star_triple_spawn_chance(TagList.Stars),lootfrog_capacity(TagList.Lootfrogs),
     fishing_tick_speed(TagList.Fishing),coal_fuel_duration_multi(TagList.Drones),fishing_income_multi(TagList.Fishing),pickaxe_crit_damage(TagList.Pickaxe),
     lootfrog_10x_spawn_chance(TagList.Lootfrogs),contract_triple_points_chance(TagList.Contracts),bomb_workshop_cap_increase(TagList.Bombs),pickaxe_radius_percent(TagList.Pickaxe),
-    ore_sell_price_multi(TagList.Ore),bar_output_multi(TagList.Ore),void_portal_chance(TagList.Drones),bomb_of_plenty_multi(TagList.Bombs),drone_suit_cap(TagList.Drones),
+    ore_sell_price_multi(TagList.Ore),bar_output_multi(TagList.Crafting),void_portal_chance(TagList.Drones),bomb_of_plenty_multi(TagList.Bombs),drone_suit_cap(TagList.Drones),
     bomb_ultra_crit_damage(TagList.Bombs),lootbug_gem_cost_reduction(TagList.Lootbugs),star_supernova_multi(TagList.Stars),star_supergiant_multi(TagList.Stars),
     obelisk_armor_reduction(TagList.Obelisk),star_radiant_chance(TagList.Stars),experience_multi(TagList.Prestige),multi_rock_chance(TagList.Ore),bomb_crit_damage(TagList.Bombs),
     ultra_stonks_chance(TagList.Chests),star_radiant_multi(TagList.Stars),contract_5x_points_chance(TagList.Contracts),golden_floor_chance(TagList.Ore),
     item_duration_multi(TagList.Misc),contract_upgrade_cost_reduction(TagList.Contracts),bomb_recharge_speed(TagList.Bombs),fishing_tiny_notice_chance(TagList.Fishing),
-    lootfrog_big_chance(TagList.Lootfrogs),bar_craft_cost_multi(TagList.Ore),freebie_cooldown_seconds(TagList.Chests),super_star_supernova_chance(TagList.Stars),
+    lootfrog_big_chance(TagList.Lootfrogs),bar_craft_cost_multi(TagList.Crafting),freebie_cooldown_seconds(TagList.Chests),super_star_supernova_chance(TagList.Stars),
     freebie_refresh_chance(TagList.Chests),lootfrog_big_multi(TagList.Lootfrogs),golden_vein_multi(TagList.Veins),double_craft_chance(TagList.Crafting),version(TagList.Others),
     lootfrogs_caught(TagList.Lootfrogs),vein_spawn_rate_multi(TagList.Veins),pickaxe_super_crit_chance(TagList.Pickaxe),novagiant_combo_multi(TagList.Stars),
     fishing_double_tick_chance(TagList.Fishing),triple_craft_chance(TagList.Crafting),golden_void_portal_chance(TagList.Drones),bomb_super_crit_chance(TagList.Bombs),
@@ -78,10 +78,9 @@ public enum Stats {
 
     
     TagList tag;
+    public Object value;
 
     Stats(TagList tg){
         tag = tg;
     }
-
-    
 }

@@ -1,0 +1,310 @@
+~ Pickaxe
+world_desc(String): The max world you can go to. IT DOESNT MEANS IT IS UNLOCKED.
+world(String): world
+is_tutorial_done_desc(String): This line confirm you havent completed the tutorial. DO IT.
+is_tutorial_done(String): is_tutorial_done
+Obelisk_desc(String): Obelisk Level.
+Obelisk(String): Obelisk
+true_pickaxe_damage(String): true_pickaxe_damage
+true_pickaxe_damage_desc: Medium damage after crit application
+
+~ Bomb_Bear
+bear_experience_until_max_desc(String): Experience Needed to max drone Grade
+bear_experience_until_max(String): bear_experience_until_max
+bear_duration_desc(String): How many seconds for one fuel
+bear_duration(String): bear_duration
+bear_duration_until_max_desc(String): Seconds of fuel needed in current grade to get max Drone
+bear_duration_until_max(String): bear_duration_until_max
+
+~ auto
+path(String): texts/en/calc.bdeko
+creation(ShortDate): 9/8/26
+
+~ Chain_Bomber
+chain_experience_until_max_desc(String): Experience Needed to max drone Grade
+chain_experience_until_max(String): chain_experience_until_max
+chain_duration_desc(String): How many seconds for one fuel
+chain_duration(String): chain_duration
+chain_duration_until_max_desc(String): Seconds of fuel needed in current grade to get max Drone
+chain_duration_until_max(String): chain_duration_until_max
+
+~ Midas
+midas_experience_until_max_desc(String): Experience Needed to max drone Grade
+midas_experience_until_max(String): midas_experience_until_max
+midas_duration_desc(String): How many seconds for one fuel
+midas_duration(String): midas_duration
+midas_duration_until_max_desc(String): Seconds of fuel needed in current grade to get max Drone
+midas_duration_until_max(String): midas_duration_until_max
+
+~ Frogger
+frogger_experience_until_max_desc(String): Experience Needed to max drone Grade
+frogger_experience_until_max(String): frogger_experience_until_max
+frogger_duration_desc(String): How many seconds for one fuel
+frogger_duration(String): frogger_duration
+frogger_duration_until_max_desc(String): Seconds of fuel needed in current grade to get max Drone
+frogger_duration_until_max(String): frogger_duration_until_max
+
+
+~ Veins
+true_rainbow_vein_desc(String): True chance of dropping a rainbow vein instead of a simple vein.
+true_rainbow_vein(String): true_rainbow_vein
+true_gleaming_rainbow_vein_multi_desc(String): Multi of the Gleaming Rainbow Vein. Assumed it is like Floors Multi (Potentially not)
+true_gleaming_rainbow_vein_multi(String): true_gleaming_rainbow_vein_multi. 
+true_gleaming_golden_vein_multi_desc(String): Multi of the Gleaming Golden Vein. Assumed it is like Floors Multi (Potentially not)
+true_gleaming_golden_vein_multi(String): true_gleaming_golden_vein_multi
+true_rainbow_vein_multi_desc(String): Multi of the Rainbow Vein. Assumed it is like Floors Multi (Potentially not)
+true_rainbow_vein_multi(String): true_rainbow_vein_multi
+true_golden_vein_multi_desc(String): Multi of the golden Vein. Assumed it is like Floors Multi (Potentially not)
+true_golden_vein_multi(String): true_golden_vein_multi
+world4_vein_double_desc(String): chances of getting a vein on a specific world. No veinseeker and double veins
+world4_vein_double(String): world4_vein_double
+world4_veinseeker_double_desc(String): chances of getting a vein on a specific world. 40% veinseeker and double veins
+world4_veinseeker_double(String): world4_veinseeker_double
+world3_vein_double_desc(String): chances of getting a vein on a specific world. No veinseeker and double veins
+world3_vein_double(String): world3_vein_double
+world3_veinseeker_double_desc(String): chances of getting a vein on a specific world. 40% veinseeker and double veins
+world3_veinseeker_double(String): world3_veinseeker_double
+world2_vein_double_desc(String): chances of getting a vein on a specific world. No veinseeker and double veins
+world2_vein_double(String): world2_vein_double
+world2_veinseeker_double_desc(String): chances of getting a vein on a specific world. 40% veinseeker and double veins
+world2_veinseeker_double(String): world2_veinseeker_double
+zone6_vein_double_desc(String): chances of getting a vein on a specific zone of world 1. No veinseeker and double veins
+zone6_vein_double(String): zone6_vein_double
+zone6_veinseeker_double_desc(String): chances of getting a vein on a specific zone of world 1. 40% veinseeker and double veins
+zone6_veinseeker_double(String): zone6_veinseeker_double
+zone5_vein_double_desc(String): chances of getting a vein on a specific zone of world 1. No veinseeker and double veins
+zone5_vein_double(String): zone5_vein_double
+zone5_veinseeker_double_desc(String): chances of getting a vein on a specific zone of world 1. 40% veinseeker and double veins
+zone5_veinseeker_double(String): zone5_veinseeker_double
+zone4_vein_double_desc(String): chances of getting a vein on a specific zone of world 1. No veinseeker and double veins
+zone4_vein_double(String): zone4_vein_double
+zone4_veinseeker_double_desc(String): chances of getting a vein on a specific zone of world 1. 40% veinseeker and double veins
+zone4_veinseeker_double(String): zone4_veinseeker_double
+zone3_vein_double_desc(String): chances of getting a vein on a specific zone of world 1. No veinseeker and double veins
+zone3_vein_double(String): zone3_vein_double
+zone3_veinseeker_double_desc(String): chances of getting a vein on a specific zone of world 1. 40% veinseeker and double veins
+zone3_veinseeker_double(String): zone3_veinseeker_double
+zone2_vein_double_desc(String): chances of getting a vein on a specific zone of world 1. No veinseeker and double veins
+zone2_vein_double(String): zone2_vein_double
+zone2_veinseeker_double_desc(String): chances of getting a vein on a specific zone of world 1. 40% veinseeker and double veins
+zone2_veinseeker_double(String): zone2_veinseeker_double
+zone1_vein_double_desc(String): chances of getting a vein on a specific zone of world 1. No veinseeker and double veins
+zone1_vein_double(String): zone1_vein_double
+zone1_veinseeker_double_desc(String): chances of getting a vein on a specific zone of world 1. 40% veinseeker and double veins
+zone1_veinseeker_double(String): zone1_veinseeker_double
+world4_vein_desc(String): chances of getting a vein on a specific floor. No veinseeker and no double veins
+world4_vein(String): world4_vein
+world4_veinseeker_desc(String): chances of getting a vein on a specific floor. 40% veinseeker and no double veins
+world4_veinseeker(String): world4_veinseeker
+world3_vein_desc(String): chances of getting a vein on a specific floor. No veinseeker and no double veins
+world3_vein(String): world3_vein
+world3_veinseeker_desc(String): chances of getting a vein on a specific floor. 40% veinseeker and no double veins
+world3_veinseeker(String): world3_veinseeker
+world2_vein_desc(String): chances of getting a vein on a specific floor. No veinseeker and no double veins
+world2_vein(String): world2_vein
+world2_veinseeker_desc(String): chances of getting a vein on a specific floor. 40% veinseeker and no double veins
+world2_veinseeker(String): world2_veinseeker
+zone6_vein_desc(String): chances of getting a vein on a specific floor. No veinseeker and no double veins
+zone6_vein(String): zone6_vein
+zone6_veinseeker_desc(String): chances of getting a vein on a specific floor. 40% veinseeker and no double veins
+zone6_veinseeker(String): zone6_veinseeker
+zone5_vein_desc(String): chances of getting a vein on a specific floor. No veinseeker and no double veins
+zone5_vein(String): zone5_vein
+zone5_veinseeker_desc(String): chances of getting a vein on a specific floor. 40% veinseeker and no double veins
+zone5_veinseeker(String): zone5_veinseeker
+zone4_vein_desc(String): chances of getting a vein on a specific floor. No veinseeker and no double veins
+zone4_vein(String): zone4_vein
+zone4_veinseeker_desc(String): chances of getting a vein on a specific floor. 40% veinseeker and no double veins
+zone4_veinseeker(String): zone4_veinseeker
+zone3_vein_desc(String): chances of getting a vein on a specific floor. No veinseeker and no double veins
+zone3_vein(String): zone3_vein
+zone3_veinseeker_desc(String): chances of getting a vein on a specific floor. 40% veinseeker and no double veins
+zone3_veinseeker(String): zone3_veinseeker
+zone2_vein_desc(String): chances of getting a vein on a specific floor. No veinseeker and no double veins
+zone2_vein(String): zone2_vein
+zone2_veinseeker_desc(String): chances of getting a vein on a specific floor. 40% veinseeker and no double veins
+zone2_veinseeker(String): zone2_veinseeker
+zone1_vein_desc(String): chances of getting a vein on a specific floor. No veinseeker and no double veins
+zone1_vein(String): zone1_vein
+zone1_veinseeker_desc(String): chances of getting a vein on a specific floor. 40% veinseeker and no double veins% of veins becoming
+zone1_veinseeker(String): zone1_veinseeker
+
+~ Veinseeker
+veinseeker_experience_until_max_desc(String): Experience Needed to max drone Grade
+veinseeker_experience_until_max(String): veinseeker_experience_until_max
+veinseeker_duration_desc(String): How many seconds for one fuel
+veinseeker_duration(String): veinseeker_duration
+veinseeker_duration_until_max_desc(String): Seconds of fuel needed in current grade to get max Drone
+veinseeker_duration_until_max(String): veinseeker_duration_until_max
+
+~ Starburst
+starburst_experience_until_max_desc(String): Experience Needed to max drone Grade
+starburst_experience_until_max(String): starburst_experience_until_max
+starburst_duration_desc(String): How many seconds for one fuel
+starburst_duration(String): starburst_duration
+starburst_duration_until_max_desc(String): Seconds of fuel needed in current grade to get max Drone
+starburst_duration_until_max(String): starburst_duration_until_max
+
+~ Elixir
+elixir_experience_until_max_desc(String): Experience Needed to max drone Grade
+elixir_experience_until_max(String): elixir_experience_until_max
+elixir_duration_desc(String): How many seconds for one fuel
+elixir_duration(String): elixir_duration
+elixir_duration_until_max_desc(String): Seconds of fuel needed in current grade to get max Drone
+elixir_duration_until_max(String): elixir_duration_until_max
+
+~ Void
+void_portal_perma_desc(String): Void Portal Chance, is permanent 40% if drone is not active, is the exact value if active.
+void_portal_perma(String): void_portal_perma
+true_galactic_void_portal_multi_desc(String): Final multiplier for galactic void portal. Assumed it is like Floors Multi (All Void Portal Included in the Stats value)
+true_galactic_void_portal_multi(String): true_galactic_void_portal_multi
+true_rainbow_void_portal_multi_desc(String): Final multiplier for rainbow void portal. Assumed it is like Floors Multi (All Void Portal Included in the Stats value)
+true_rainbow_void_portal_multi(String): true_rainbow_void_portal_multi
+true_golden_void_portal_multi_desc(String): Final multiplier for golden void portal. Assumed it is like Floors Multi (All Void Portal Included in the Stats value)
+true_golden_void_portal_multi(String): true_golden_void_portal_multi
+true_galactic_void_portal_desc(String): Chance of a galactic void portal instead of a normal one. If Void Portal == 0, consider it at 40%
+true_galactic_void_portal(String): true_galactic_void_portal
+true_rainbow_void_portal_desc(String): Chance of a rainbow void portal instead of a normal one. If Void Portal == 0, consider it at 40%
+true_rainbow_void_portal(String): true_rainbow_void_portal
+true_golden_void_portal_desc(String): Chance of a golden void portal instead of a normal one. If Void Portal == 0, consider it at 40%
+true_golden_void_portal(String): true_golden_void_portal
+true_void_portal_desc(String): Chance of a void portal. Hidden
+true_void_portal(String): true_void_portal
+void_experience_until_max_desc(String): Experience Needed to max drone Grade
+void_experience_until_max(String): void_experience_until_max
+void_duration_desc(String): How many seconds for one fuel
+void_duration(String): void_duration
+void_duration_until_max_desc(String): Seconds of fuel needed in current grade to get max Drone
+void_duration_until_max(String): void_duration_until_max
+
+~ Angler
+angler_experience_until_max_desc(String): Experience Needed to max drone Grade
+angler_experience_until_max(String): angler_experience_until_max
+angler_duration_desc(String): How many seconds for one fuel
+angler_duration(String): angler_duration
+angler_duration_until_max_desc(String): Seconds of fuel needed in current grade to get max Drone
+angler_duration_until_max(String): angler_duration_until_max
+
+~ Prism
+prism_experience_until_max_desc(String): Experience Needed to max drone Grade
+prism_experience_until_max(String): prism_experience_until_max
+prism_duration_desc(String): How many seconds for one fuel
+prism_duration(String): prism_duration
+prism_duration_until_max_desc(String): Seconds of fuel needed in current grade to get max Drone
+prism_duration_until_max(String): prism_duration_until_max
+
+~ Minotaur
+minotaur_experience_until_max_desc(String): Experience Needed to max drone Grade
+minotaur_experience_until_max(String): minotaur_experience_until_max
+minotaur_duration_desc(String): How many seconds for one fuel
+minotaur_duration(String): minotaur_duration
+minotaur_duration_until_max_desc(String): Seconds of fuel needed in current grade to get max Drone
+minotaur_duration_until_max(String): minotaur_duration_until_max
+
+~ Lootbugs
+lootbugsWithGoldenLanternAndBear_desc(String): Seconds per Lootbugs (Golden Lantern and Bear)
+lootbugsWithGoldenLanternAndBear(String): lootbugsWithGoldenLanternAndBear
+lootbugsWithGoldenLantern_desc(String): Seconds per Lootbugs (Golden Lantern)
+lootbugsWithGoldenLantern(String): lootbugsWithGoldenLantern
+lootbugsWithLantern_desc(String): Seconds per Lootbugs (Lantern)
+lootbugsWithLantern(String): lootbugsWithLantern
+lootbugsWithBearAndLantern_desc(String): Seconds per Lootbugs (Lantern and Bear)
+lootbugsWithBearAndLantern(String): lootbugsWithBearAndLantern
+lootbugsWithBear_desc(String): Seconds per Lootbugs (Bear)
+lootbugsWithBear(String): lootbugsWithBear
+lootbugsAlone_desc(String): Seconds per Lootbugs (no lantern no Bear)
+lootbugsAlone(String): lootbugsAlone
+
+~ Floors
+rainbow_veins_rainbow_portal_rainbow_floor_desc(String): DC8 required rainbow veins, rainbow void portal, rainbow floor. You need 2500 of them.
+rainbow_veins_rainbow_portal_rainbow_floor(String): rainbow_veins_rainbow_portal_rainbow_floor
+true_golden_prismatic_floor_multi_desc(String): Final multiplier for golden prismatic floor
+true_golden_prismatic_floor_multi(String): true_golden_prismatic_floor_multi
+true_golden_galactic_floor_multi_desc(String): Final multiplier for golden galactic floor
+true_golden_galactic_floor_multi(String): true_golden_galactic_floor_multi
+true_golden_rainbow_floor_multi_desc(String): Final multiplier for golden rainbow floor
+true_golden_rainbow_floor_multi(String): true_golden_rainbow_floor_multi
+true_golden_floor_multi_desc(String): Final multiplier for golden floor
+true_golden_floor_multi(String): true_golden_floor_multi
+true_prismatic_floor_multi_desc(String): Final multiplier for prismatic floor
+true_prismatic_floor_multi(String): true_prismatic_floor_multi
+true_galactic_floor_multi_desc(String): Final multiplier for galactic floor
+true_galactic_floor_multi(String): true_galactic_floor_multi
+true_rainbow_floor_multi_desc(String): Final multiplier for rainbow floor
+true_rainbow_floor_multi(String): true_rainbow_floor_multi
+true_prismatic_floor_desc(String): Show the true prismatic floor chance. (prismatic chance * rainbow chance * galactic floor)
+true_prismatic_floor(String): true_prismatic_floor
+true_galactic_floor_desc(String): Show the true galactic floor chance. (rainbow chance * galactic floor)
+true_galactic_floor(String): true_galactic_floor
+true_rainbow_floor_desc(String): Show the true rainbow floor chance. Obviously its the same as in stats, but this is an hidden String, right?
+true_rainbow_floor(String): true_rainbow_floor
+
+~ Stonks
+true_ultra_stonks_multi_desc(String): Multi of the loot from a ultra stonks proc
+true_ultra_stonks_multi(String): true_ultra_stonks_multi
+true_super_stonks_multi_desc(String): Multi of the loot from a super stonks proc
+true_super_stonks_multi(String): true_super_stonks_multi
+true_ultra_stonks_desc(String): Chance of Ultra Stonks when taking a freebie
+true_ultra_stonks(String): true_ultra_stonks
+true_super_stonks_desc(String): Chance of Super Stonks when taking a freebie
+true_super_stonks(String): true_super_stonks
+true_stonks_desc(String): Chance of Stonks when taking a freebie. Hidden
+true_stonks(String): true_stonks
+
+~ Lootfrogs
+true_massive_golden_lootfrogs_multi_desc(String): Multi for dropping a massive golden lootfrog
+true_massive_golden_lootfrogs_multi(String): true_massive_golden_lootfrogs_multi
+true_massive_lootfrogs_multi_desc(String): Multi for dropping a massive lootfrog
+true_massive_lootfrogs_multi(String): true_massive_lootfrogs_multi
+true_big_golden_lootfrogs_multi_desc(String): Multi for dropping a big golden lootfrog
+true_big_golden_lootfrogs_multi(String): true_big_golden_lootfrogs_multi
+medium_additional_lootfrogs_desc(String): Estimation of the medium amount of frogs added through 10x and 3x procs. The calculation isnt exact, but realistic to randomness.
+medium_additional_lootfrogs(String): medium_additional_lootfrogs
+true_massive_golden_lootfrogs_desc(String): True chance of massive golden lootfrogs
+true_massive_golden_lootfrogs(String): true_massive_golden_lootfrogs
+true_massive_lootfrogs_desc(String): True chance of massive lootfrogs
+true_massive_lootfrogs(String): true_massive_lootfrogs
+true_big_golden_lootfrogs_desc(String): True chance of big golden lootfrogs
+true_big_golden_lootfrogs(String): true_big_golden_lootfrogs
+
+~ Star
+DC13_challenge_floor_desc(String): How many medium floor clear it would take to complete DC13
+DC13_challenge_floor(String): DC13_challenge_floor
+star_chance_per_floor_desc(String): Chance of a star per floor mined.
+star_chance_per_floor(String): star_chance_per_floor
+radiant_supernova_supergiant_star_desc(String): Chance of Radiant Supernova Supergiant Star. Needed for DC13
+radiant_supernova_supergiant_star(String): radiant_supernova_supergiant_star
+
+~ Gifts
+cherry_charge_gift_max_desc(String): Max amount of cherry dropped in a base gift reward
+cherry_charge_gift_max(String): cherry_charge_gift_max
+cherry_charge_gift_min_desc(String): Min amount of cherry dropped in a base gift reward
+cherry_charge_gift_min(String): cherry_charge_gift_min
+fuel_gift_max_desc(String): Max amount of gift dropped in a rare gift reward
+fuel_gift_max(String): fuel_gift_max
+fuel_gift_min_desc(String): Min amount of gift dropped in a rare gift reward
+fuel_gift_min(String): fuel_gift_min
+base_high_chest_gift_max_desc(String): Max amount of gems dropped in a base gift reward.
+base_high_chest_gift_max(String): base_high_chest_gift_max
+base_high_chest_gift_min_desc(String): Min amount of gems dropped in a base gift reward.
+base_high_chest_gift_min(String): base_high_chest_gift_min
+rare_gems_gift_max_desc(String): Max amount of gems dropped in a rare gift reward.
+rare_gems_gift_max(String): rare_gems_gift_max
+rare_gems_gift_min_desc(String): Min amount of gems dropped in a rare gift reward.
+rare_gems_gift_min(String): rare_gems_gift_min
+base_low_chest_gift_max_desc(String): Max amount of relic chests dropped in a base gift reward.
+base_low_chest_gift_max(String): base_low_chest_gift_max
+base_low_chest_gift_min_desc(String): min amount of relic chests dropped in a base gift reward.
+base_low_chest_gift_min(String): base_low_chest_gift_min
+base_high_gems_gift_max_desc(String): Max amount of gems dropped in a base gift reward.
+base_high_gems_gift_max(String): base_high_gems_gift_max
+base_high_gems_gift_min_desc(String): Min amount of gems dropped in a base gift reward.
+base_high_gems_gift_min(String): base_high_gems_gift_min
+base_med_gems_gift_max_desc(String): Max amount of gems dropped in a base gift reward.
+base_med_gems_gift_max(String): base_med_gems_gift_max
+base_med_gems_gift_min_desc(String): Min amount of gems dropped in a base gift reward.
+base_med_gems_gift_min(String): base_med_gems_gift_min
+base_low_gems_gift_max_desc(String): Max amount of gems dropped in a base gift reward.
+base_low_gems_gift_max(String): base_low_gems_gift_max
+base_low_gems_gift_min_desc(String): Min amount of gems dropped in a base gift reward.
+base_low_gems_gift_min(String): base_low_gems_gift_min

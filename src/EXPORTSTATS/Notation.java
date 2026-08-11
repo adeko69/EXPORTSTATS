@@ -16,17 +16,13 @@ public enum Notation {
 
     public static String getBestNotation(BigDecimal number) {
         if (number == null) return "";
-        if (EXPORTSTATS.precision == -1) 
-            return number.toBigInteger().toString();
-        
+        if (EXPORTSTATS.precision == -1) {
+            return number.stripTrailingZeros().toPlainString();
+        }
 
         BigDecimal abs = number.abs();
         if (abs.compareTo(BigDecimal.ZERO) == 0) 
             return "0";
-
-
-        if (scientificNotation) 
-            return toScientific(number);
         
 
         BigDecimal minThreshold = BigDecimal.valueOf(100000);
@@ -37,6 +33,8 @@ public enum Notation {
         if (abs.compareTo(threshold) < 0) 
             return roundToPrecision(number);
 
+        if (scientificNotation) 
+            return toScientific(number);
 
         Notation chosen = null;
         for (Notation notation : values()) 
@@ -55,6 +53,7 @@ public enum Notation {
         return formatted + chosen.name();
     }
 
+    
     private static String toScientific(BigDecimal number) {
         BigDecimal abs = number.abs();
         int exponent = getExponent(abs);
