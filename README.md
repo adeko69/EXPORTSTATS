@@ -110,5 +110,13 @@ To avoid the player to calculate things, the code helps you.
 > [!NOTE]
 > Localisation module is for now limited. Adding entry is for now limited
 
-## Usage Example
-You can have a demo app created with that jar in releases (Android 12+)
+# APK
+You can have a demo app created with that jar in releases (Android 12+). Made with Android Studio.
+
+## WARNING
+Please, take care of this information ABOUT THE APK:
+
+> I learned Kotlin literally 3 hours before starting this app, it is not perfect.
+> I used exclusively the tutorial from Android Studio.
+
+The problem is that Android Studio has exclusively outdated tutorial, as a result, some function were deprecated and some totally removed from Android 12+. This is why, and I don't hide it THE UI AND THE FRONT END WAS DONE HELPED BY AI. I ALSO DID HUMAN PROOFREADING.
