@@ -2,6 +2,9 @@
 
 At the opposite from EXPORTSTATS.jar, calc is used to calculate things (lol)
 
+Isn't updated anymore (There are too much element)
+To find the parameters, just go to the texts files
+
 ###Usages
 
 ## Pickaxe
@@ -19,13 +22,8 @@ At the opposite from EXPORTSTATS.jar, calc is used to calculate things (lol)
 ## Veins
 `zone_vein` - `world_vein`: Show the chance of getting a vein, without double veins and without veinseeker
 `zone_veinseeker` - `world_veinseeker`: Show the chance of getting a vein, without double veins and with veinseeker
-
-> [!NOTE]
-> The following are not included but coded. The reason is **Easier to add or remove something if we know the double veins is already bought**
-
-`2.2.6-3 or later`:
-> `zone_vein_double` - `world_vein_double`: Show the chance of getting a vein, with double veins and without veinseeker
-> `zone_veinseeker_double` - `world_veinseeker_double`: Show the chance of getting a vein, with double veins and with veinseeker
+`zone_vein_double` - `world_vein_double`: Show the chance of getting a vein, with double veins and without veinseeker
+`zone_veinseeker_double` - `world_veinseeker_double`: Show the chance of getting a vein, with double veins and with veinseeker
 
 ## Floors
 `true_rainbow_floor` - `true_galactic_floor` - `true_prismatic_floor`: Chance of getting special floor. `true_rainbow_floor` is always off (as it is the same as `rainbow_floor_chance`)
@@ -35,5 +33,8 @@ At the opposite from EXPORTSTATS.jar, calc is used to calculate things (lol)
 `duration`: The number of second gave by the drone
 `experience_until_max`: How many experience you need to max grade.
 
+
+
 ## Void Drone
 `true_void_portal` - `true_golde_void_portal` - `true_rainbow_void_portal` - `true_galactic_void_portal`: Show the true chance of hitting a stonks. Base Void Portal is hidden.
+true_void_portal_multi also exists
