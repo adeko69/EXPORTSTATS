@@ -9,6 +9,8 @@ true_pickaxe_damage(String): true_pickaxe_damage
 true_pickaxe_damage_desc: Medium damage after crit application
 
 ~ Bomb_Bear
+bear_lootbug_speed_multi_desc(String): Current Additional Speed on Fueled Bear for lootbugs
+bear_lootbug_speed_multi(String): bear_lootbug_speed_multi
 bear_experience_until_max_desc(String): Experience Needed to max drone Grade
 bear_experience_until_max(String): bear_experience_until_max
 bear_duration_desc(String): How many seconds for one fuel
@@ -202,6 +204,18 @@ minotaur_duration_until_max_desc(String): Seconds of fuel needed in current grad
 minotaur_duration_until_max(String): minotaur_duration_until_max
 
 ~ Lootbugs
+lootbugsWithGoldenLanternAndBear_cap_desc(String): Time to full cap lootbugs using Golden Lantern and Bear
+lootbugsWithGoldenLanternAndBear_cap(String): lootbugsWithGoldenLanternAndBear_cap
+lootbugsWithGoldenLantern_cap_desc(String): Time to full cap lootbugs using Golden Lantern
+lootbugsWithGoldenLantern_cap(String): lootbugsWithGoldenLantern_cap
+lootbugsWithLantern_cap_desc(String): Time to full cap lootbugs using Lantern
+lootbugsWithLantern_cap(String): lootbugsWithLantern_cap
+lootbugsWithBearAndLantern_cap_desc(String): Time to full cap lootbugs using Lantern and Bear
+lootbugsWithBearAndLantern_cap(String): lootbugsWithBearAndLantern_cap
+lootbugsWithBear_cap_desc(String): Time to full cap lootbugs using\ Bear
+lootbugsWithBear_cap(String): lootbugsWithBear_cap
+lootbugsAlone_cap_desc(String): Time to full cap lootbugs, no bear, no lantern.
+lootbugsAlone_cap(String): lootbugsAlone_cap
 lootbugsWithGoldenLanternAndBear_desc(String): Seconds per Lootbugs (Golden Lantern and Bear)
 lootbugsWithGoldenLanternAndBear(String): lootbugsWithGoldenLanternAndBear
 lootbugsWithGoldenLantern_desc(String): Seconds per Lootbugs (Golden Lantern)
@@ -239,7 +253,13 @@ true_galactic_floor(String): true_galactic_floor
 true_rainbow_floor_desc(String): Show the true rainbow floor chance. Obviously its the same as in stats, but this is an hidden String, right?
 true_rainbow_floor(String): true_rainbow_floor
 
-~ Stonks
+~ Freebie
+expected_ultra_stonks_on_max_cap_desc(String): How many ultra stonks can I more likely have if I have max cap
+expected_ultra_stonks_on_max_cap(String): expected_ultra_stonks_on_max_cap
+expected_super_stonks_on_max_cap_desc(String): How many super stonks can I more likely have if I have max cap
+expected_super_stonks_on_max_cap(String): expected_super_stonks_on_max_cap
+expected_stonks_on_max_cap_desc(String): How many stonks can I more likely have if I have max cap
+expected_stonks_on_max_cap(String): expected_stonks_on_max_cap
 true_ultra_stonks_multi_desc(String): Multi of the loot from a ultra stonks proc
 true_ultra_stonks_multi(String): true_ultra_stonks_multi
 true_super_stonks_multi_desc(String): Multi of the loot from a super stonks proc
@@ -268,9 +288,19 @@ true_big_golden_lootfrogs_desc(String): True chance of big golden lootfrogs
 true_big_golden_lootfrogs(String): true_big_golden_lootfrogs
 
 ~ Star
+true_super_star_per_floor_desc(String): Medium number of Super Star per floor cleared (triple and x10 included)
+true_super_star_per_floor(String): true_super_star_per_floor
+super_star_chance_per_floor_desc(String): Chance of one Super Star per floor cleared
+super_star_chance_per_floor(String): super_star_chance_per_floor
+true_star_per_floor_desc(String): Medium number of Star per floor cleared (triple and double included)
+true_star_per_floor(String): true_star_per_floor
+DC13_challenge_time_spoon_desc(String): Medium time to clear DC13 at 60 floors / min
+DC13_challenge_time_spoon(String): DC13_challenge_time_spoon
+DC13_challenge_time_off_desc(String): Medium time to clear DC13 at 48 floors / min (So offline)
+DC13_challenge_time_off(String): DC13_challenge_time_off
 DC13_challenge_floor_desc(String): How many medium floor clear it would take to complete DC13
 DC13_challenge_floor(String): DC13_challenge_floor
-star_chance_per_floor_desc(String): Chance of a star per floor mined.
+star_chance_per_floor_desc(String): Chance of a single star per floor mined.
 star_chance_per_floor(String): star_chance_per_floor
 radiant_supernova_supergiant_star_desc(String): Chance of Radiant Supernova Supergiant Star. Needed for DC13
 radiant_supernova_supergiant_star(String): radiant_supernova_supergiant_star
