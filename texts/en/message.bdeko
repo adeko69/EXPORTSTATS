@@ -1,0 +1,6 @@
+~ null
+
+PARTIALLY_OK: {Message.PARTIALLY_OK} Data seems to be correct, but jar version [current.version] and game version [current.game_version] is different. It should still work partially, tho.
+OK: {Message.OK} Loading data. No issues.
+NOT_FOUND: {Message.NOT_FOUND} Loading data for the first time, everything has to be wrote. The [current.stats] stats element are all loaded, but [current.calc] calculation element need to be checked then validated!
+INVALID: {Message.INVALID} Invalidating calc and recalculating it. This happen when your save Calc version isn't flagged as the calc module version.

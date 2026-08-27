@@ -338,3 +338,113 @@ base_low_gems_gift_max_desc(String): Max amount of gems dropped in a base gift r
 base_low_gems_gift_max(String): base_low_gems_gift_max
 base_low_gems_gift_min_desc(String): Min amount of gems dropped in a base gift reward.
 base_low_gems_gift_min(String): base_low_gems_gift_min
+
+~ Gifts_in_Freebies
+esperance_time_for_X100_gifts_desc(String): Time estimated between 2 x100 (dont forget about speed and freebie debuff, 63.2%)
+esperance_time_for_X100_gifts(String): esperance_time_for_X100_gifts
+estimated_time_for_X100_gifts_desc(String): Time estimated between 2 x100 (dont forget about speed and freebie debuff, 95%)
+estimated_time_for_X100_gifts(String): estimated_X100_gifts
+X100_gift_per_freebie_cap_desc(String): Medium number of x100 gifts in a fully capped Freebie.
+X100_gift_per_freebie_cap(String): X100_gift_per_freebie_cap
+gift_per_freebie_cap_desc(String): Medium number of a single gift in a fully capped Freebie.
+gift_per_freebie_cap(String): gift_per_freebie_cap
+
+~ Obelisk_Life
+damage_per_obelisk_attack_desc(String): How much damage you can max get per obelisk attack.
+damage_per_obelisk_attack(String): damage_per_obelisk_attack
+slow_obelisk_go_mode_desc(String): How many time it takes to kill the obelisk in one sitting. Use "optimal_attack_time_obelisk"*1.35 (So less optimistic)
+slow_obelisk_go_mode(String): slow_obelisk_go_mode
+obelisk_go_mode_desc(String): How many time it takes to kill the obelisk in one sitting. Use "optimal_attack_time_obelisk" (So ultra optimistic)
+obelisk_go_mode(String): obelisk_go_mode
+optimal_attack_time_obelisk_desc(String): Seconds separating two obelisk attack.
+optimal_attack_time_obelisk(String): optimal_attack_time_obelisk
+true_obelisk_damage_desc(String): Number of damage dealt to the obelisk
+true_obelisk_damage(String): true_obelisk_damage
+number_of_obelisk_attack_desc(String): Number of attack required at max hp to destroy the obelisk with current stats
+number_of_obelisk_attack(String): number_of_obelisk_attack
+obelisk_armor_desc(String): This obelisk armor of the obelisk. (Obelisk Armor Reduced included)
+obelisk_armor(String): obelisk_armor
+obelisk_hp_desc(String): This Obelisk hp of the obelisk. (damageless obelisk)
+obelisk_hp(String): obelisk_hp
+
+~ Stonks
+true_ultra_stonks_relics_amount_desc(String): Number of relics gained with an ultra stonks
+true_ultra_stonks_relics_amount(String): true_ultra_stonks_relics_amount
+true_super_stonks_relics_amount_desc(String): Number of relics gained with a super stonks
+true_super_stonks_relics_amount(String): true_super_stonks_relics_amount
+true_stonks_relics_amount_desc(String): Number of relics gained with a stonks
+true_stonks_relics_amount(String): true_stonks_relics_amount
+true_ultra_stonks_chests_amount_desc(String): Number of chests gained with an ultra stonks
+true_ultra_stonks_chests_amount(String): true_ultra_stonks_chests_amount
+true_super_stonks_chests_amount_desc(String): Number of chests gained with a super stonks
+true_super_stonks_chests_amount(String): true_super_stonks_chests_amount
+true_stonks_chests_amount_desc(String): Number of chests gained with a stonks
+true_stonks_chests_amount(String): true_stonks_chests_amount
+true_ultra_stonks_gems_amount_desc(String): Number of gems gained with an ultra stonks
+true_ultra_stonks_gems_amount(String): true_ultra_stonks_gems_amount
+true_super_stonks_gems_amount_desc(String): Number of gems gained with a super stonks
+true_super_stonks_gems_amount(String): true_super_stonks_gems_amount
+true_stonks_gems_amount_desc(String): Number of gems gained with a stonks
+true_stonks_gems_amount(String): true_stonks_gems_amount
+esperance_time_for_ultra_stonks_desc(String): Esperance time for a ultra stonks proc (=63.2% chances)
+esperance_time_for_ultra_stonks(String): esperance_time_for_ultra_stonks
+esperance_time_for_super_stonks_desc(String): Esperance time for a super stonks proc (=63.2% chances)
+esperance_time_for_super_stonks(String): esperance_time_for_super_stonks
+esperance_time_for_stonks_desc(String): Esperance time for a stonks proc (=63.2% chances)
+esperance_time_for_stonks(String): esperance_time_for_stonks
+estimated_time_for_ultra_stonks_desc(String): Time required to expect at least one ultra stonks (=95% chances)
+estimated_time_for_ultra_stonks(String): estimated_time_for_ultra_stonks
+estimated_time_for_super_stonks_desc(String): Time required to expect at least one super stonks (=95% chances)
+estimated_time_for_super_stonks(String): estimated_time_for_super_stonks
+estimated_time_for_stonks_desc(String): Time required to expect at least one stonks (=95% chances)
+estimated_time_for_stonks(String): estimated_time_for_stonks
+
+~ Base
+true_base_gift_chances_desc(String): Chance of getting a base reward for a gift
+true_base_gift_chances(String): true_base_gift_chances
+skill_gift_max_desc(String): Chance of dropping a max amount of skill bits
+skill_gift_max(String): skill_gift_max
+skill_gift_min_desc(String): Chance of dropping a min amount of skill bits
+skill_gift_min(String): skill_gift_min
+
+~ rare_overwritten
+true_Divine_Chest_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_Divine_Chest_chance(String): true_Divine_Chest_chance
+true_Gilded_Skin_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_Gilded_Skin_chance(String): true_Gilded_Skin_chance
+true_Skin_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_Skin_chance(String): true_Skin_chance
+true_forbidden_sushi_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_forbidden_sushi_chance(String): true_forbidden_sushi_chance
+true_MEGA_gems_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_MEGA_gems_chance(String): true_MEGA_gems_chance
+true_rare_sushi_high_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_rare_sushi_high_chance(String): true_rare_sushi_high_chance
+true_ButteryLobster_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_ButteryLobster_chance(String): true_ButteryLobster_chance
+true_Stickers_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_Stickers_chance(String): true_Stickers_chance
+true_Cosmic_Candy_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_Cosmic_Candy_chance(String): true_Cosmic_Candy_chance
+true_Frogspawn_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_Frogspawn_chance(String): true_Frogspawn_chance
+true_Relic_Chest_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_Relic_Chest_chance(String): true_Relic_Chest_chance
+true_Gem_Chest_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_Gem_Chest_chance(String): true_Gem_Chest_chance
+true_mythic_chest_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_mythic_chest_chance(String): true_mythic_chest_chance
+true_rare_sushi_low_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_rare_sushi_low_chance(String): true_rare_sushi_low_chance
+true_idol_token_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_idol_token_chance(String): true_idol_token_chance
+true_fuel_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_fuel_chance(String): true_fuel_chance
+true_t2_items_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_t2_items_chance(String): true_t2_items_chance
+true_base_gems_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_base_gems_chance(String): true_base_gems_chance
+true_gifts_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_gifts_chance(String): true_gifts_chance
+true_star_spawn_chance_desc(String): True chance of {this} not being overwritten (Localisation will be done later)
+true_star_spawn_chance(String): true_star_spawn_chance
