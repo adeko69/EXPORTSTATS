@@ -8,6 +8,8 @@ import java.util.List;
 import adeko.FM.FileManage;
 import adeko.FM.LanguageManage;
 import adeko.deko.JsonDeko;
+import adeko.deko.Lambda;
+import adeko.deko.Message;
 import adeko.deko.Restore;
 import adeko.deko.WhoAmI;
 import adeko.text.Texts;
@@ -22,7 +24,10 @@ public class EXPORTSTATS {
 
     //PRECISION CUT THE DECIMAL PLACES OF THE NUMBERS, -1 = NO CUT
     public static int precision = 3;
-    final String hardcoded_version = "2.2.6";
+    final static String hardcoded_version = "v2.2.6";
+    final static int hardcoded_calc_version = 0;
+    static Message message = Message.OK;
+    
 
     private static void ensureSettingsLoaded(){
         if(Restore.getSave(WhoAmI.SETTINGS) == null) new Restore("settings.bdeko", WhoAmI.SETTINGS);
@@ -57,6 +62,7 @@ public class EXPORTSTATS {
                 getCalc(c);
             }
         }
+        calc.add("calc_version", hardcoded_calc_version, "auto");
     }
 
     public static Object getCalc(Calc c){
@@ -165,11 +171,13 @@ public class EXPORTSTATS {
     
 
     public static String loadingText(){
-        return "Loading a lot of elements!"+"\n"+
-                "Converting "+Stats.values().length + " elements into a special file...\n"+
-                "Calculating less than "+Calc.values().length + " elements...\n"+
-                "Ignoring a lot of the calculation! (95% at 0.0% of progression in game)\n"+
-                "This loading screen is quicker for beginners!";
+        Lambda lb = new Lambda();
+        lb.add("version", hardcoded_version);
+        if(r != null) lb.add("game_version", r.get("version"));
+        else lb.add("game_version", "{Message.TOO_EARLY}");
+        lb.add("stats", Stats.values().length);
+        lb.add("calc", Calc.values().length);
+        return Texts.getText("message", message.name(), lb);
     }
 
     public static String getString(Calc c){
@@ -325,6 +333,20 @@ public class EXPORTSTATS {
 
     public static void loadRestore(int x){
         r = new Restore(exported+"/"+x+".bdeko");
+        if(!r.exists()){
+            message = Message.NOT_FOUND;
+        } else {
+            Calc.load(x);
+            if(!calc.exists()){
+                message = Message.NOT_FOUND;
+            } else {
+                if(!calc.check("calc_version")) calc.add("calc_version",-1,"auto");
+                if(((int) calc.get("calc_version")) != hardcoded_calc_version){
+                    message = Message.INVALID;
+                }
+                if(!r.get("version").equals(hardcoded_version)) message = Message.PARTIALLY_OK;
+            }
+        }
     }
 
     public static void load(int x){
@@ -333,8 +355,19 @@ public class EXPORTSTATS {
         if(r == null) loadRestore(x);
         for(CalcTag ct : CalcTag.values())
             ct.show();
-        Calc.load(x);
-        if(!calc.exists()) calculateAll();
+        
+        if(!calc.exists()) 
+            calculateAll();
+        else{
+            if(((int) calc.get("calc_version")) != hardcoded_calc_version){
+                try{
+                    FileManage.eraseFile(EXPORTSTATS.exported+"/"+x+"_calc.bdeko");
+                } catch (Exception e){
+                }
+                Calc.load(x);
+                calculateAll();
+            }
+        }
         if(!r.exists()) {r = null; return;}
         if(r.check("precision")) precision = (int) r.get("precision");
     }

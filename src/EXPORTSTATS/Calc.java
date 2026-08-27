@@ -9,13 +9,14 @@ import adeko.types.Voidable;
 import adeko.utils.Console;
 import pkg.As;
 import pkg.Drones;
+import pkg.Gift;
 import pkg.Pickaxe;
 
 public enum Calc {
 
-    Obelisk(CalcTag.Pickaxe,As.N),
-    is_tutorial_done(CalcTag.Pickaxe,As.B),
-    world(CalcTag.Pickaxe,As.N),
+    Obelisk(CalcTag.General,As.N),
+    is_tutorial_done(CalcTag.General,As.B),
+    world(CalcTag.General,As.N),
 
     true_galactic_floor(CalcTag.Floors,As.P),
     true_prismatic_floor(CalcTag.Floors,As.P),
@@ -93,11 +94,25 @@ public enum Calc {
     true_massive_lootfrogs(CalcTag.Lootfrogs,As.P),
     true_massive_lootfrogs_multi(CalcTag.Lootfrogs,As.T),
 
+    gift_per_freebie_cap(CalcTag.Gifts_in_Freebies,As.N),
+    X100_gift_per_freebie_cap(CalcTag.Gifts_in_Freebies,As.N),
+    esperance_time_for_X100_gifts(CalcTag.Gifts_in_Freebies,As.S),
+    estimated_time_for_X100_gifts(CalcTag.Gifts_in_Freebies,As.S),
+
     true_massive_golden_lootfrogs(CalcTag.Lootfrogs,As.P),
     true_massive_golden_lootfrogs_multi(CalcTag.Lootfrogs,As.T),
     medium_additional_lootfrogs(CalcTag.Lootfrogs,As.N),
 
-    true_pickaxe_damage(CalcTag.Pickaxe,As.N),
+    true_pickaxe_damage(CalcTag.Damage,As.N),
+    obelisk_hp(CalcTag.Obelisk_Life, As.N),
+    obelisk_armor(CalcTag.Obelisk_Life, As.N),
+    optimal_attack_time_obelisk(CalcTag.Obelisk_Life, As.S),
+    true_obelisk_damage(CalcTag.Obelisk_Life, As.N),
+    damage_per_obelisk_attack(CalcTag.Obelisk_Life, As.N),
+    number_of_obelisk_attack(CalcTag.Obelisk_Life, As.N),
+    obelisk_go_mode(CalcTag.Obelisk_Life, As.S),
+    slow_obelisk_go_mode(CalcTag.Obelisk_Life, As.S),
+
     bear_duration_until_max(CalcTag.Bomb_Bear,As.N), 
     bear_duration(CalcTag.Bomb_Bear,As.N),
     bear_experience_until_max(CalcTag.Bomb_Bear,As.N),
@@ -158,34 +173,86 @@ public enum Calc {
     expected_stonks_on_max_cap(CalcTag.Stonks,As.N),
     expected_super_stonks_on_max_cap(CalcTag.Stonks,As.N),
     expected_ultra_stonks_on_max_cap(CalcTag.Stonks,As.N),
+
+    esperance_time_for_stonks(CalcTag.Stonks,As.S),
+    esperance_time_for_super_stonks(CalcTag.Stonks,As.S),
+    esperance_time_for_ultra_stonks(CalcTag.Stonks,As.S),
+
+    estimated_time_for_stonks(CalcTag.Stonks,As.S),
+    estimated_time_for_super_stonks(CalcTag.Stonks,As.S),
+    estimated_time_for_ultra_stonks(CalcTag.Stonks,As.S),
+
     true_super_stonks(CalcTag.Stonks,As.P),
     true_ultra_stonks(CalcTag.Stonks,As.P),
-    true_super_stonks_multi(CalcTag.Stonks,As.P),
-    true_ultra_stonks_multi(CalcTag.Stonks,As.P),
+    true_stonks_gems_amount(CalcTag.Stonks,As.T),
+    true_super_stonks_gems_amount(CalcTag.Stonks,As.T),
+    true_ultra_stonks_gems_amount(CalcTag.Stonks,As.T),
 
-    base_low_gems_gift_min(CalcTag.Gifts,As.N),
-    base_low_gems_gift_max(CalcTag.Gifts,As.N),
+    true_stonks_chests_amount(CalcTag.Stonks,As.T),
+    true_super_stonks_chests_amount(CalcTag.Stonks,As.T),
+    true_ultra_stonks_chests_amount(CalcTag.Stonks,As.T),
 
-    base_med_gems_gift_min(CalcTag.Gifts,As.N),
-    base_med_gems_gift_max(CalcTag.Gifts,As.N),
+    true_stonks_relics_amount(CalcTag.Stonks,As.T),
+    true_super_stonks_relics_amount(CalcTag.Stonks,As.T),
+    true_ultra_stonks_relics_amount(CalcTag.Stonks,As.T),
+    
+    true_super_stonks_multi(CalcTag.Stonks,As.T),
+    true_ultra_stonks_multi(CalcTag.Stonks,As.T),
+    
+    true_base_gift_chances(CalcTag.Base, As.P),
 
-    base_high_gems_gift_min(CalcTag.Gifts,As.N),
-    base_high_gems_gift_max(CalcTag.Gifts,As.N),
+    base_low_gems_gift_min(CalcTag.Base,As.N),
+    base_low_gems_gift_max(CalcTag.Base,As.N),
 
-    base_low_chest_gift_min(CalcTag.Gifts,As.N),
-    base_low_chest_gift_max(CalcTag.Gifts,As.N),
+    base_med_gems_gift_min(CalcTag.Base,As.N),
+    base_med_gems_gift_max(CalcTag.Base,As.N),
 
-    rare_gems_gift_min(CalcTag.Gifts,As.N),
-    rare_gems_gift_max(CalcTag.Gifts,As.N),
+    base_high_gems_gift_min(CalcTag.Base,As.N),
+    base_high_gems_gift_max(CalcTag.Base,As.N),
 
-    base_high_chest_gift_min(CalcTag.Gifts,As.N),
-    base_high_chest_gift_max(CalcTag.Gifts,As.N),
+    base_low_chest_gift_min(CalcTag.Base,As.N),
+    base_low_chest_gift_max(CalcTag.Base,As.N),
 
-    fuel_gift_min(CalcTag.Gifts,As.N),
-    fuel_gift_max(CalcTag.Gifts,As.N),
+    rare_gems_gift_min(CalcTag.Drop_rare,As.N),
+    rare_gems_gift_max(CalcTag.Drop_rare,As.N),
 
-    cherry_charge_gift_min(CalcTag.Gifts,As.N),
-    cherry_charge_gift_max(CalcTag.Gifts,As.N);
+    base_high_chest_gift_min(CalcTag.Base,As.N),
+    base_high_chest_gift_max(CalcTag.Base,As.N),
+
+    fuel_gift_min(CalcTag.Drop_rare,As.N),
+    fuel_gift_max(CalcTag.Drop_rare,As.N),
+
+    skill_gift_min(CalcTag.Base,As.N),
+    skill_gift_max(CalcTag.Base,As.N),
+
+    cherry_charge_gift_min(CalcTag.Base,As.N),
+    cherry_charge_gift_max(CalcTag.Base,As.N),
+    
+    true_star_spawn_chance(CalcTag.rare_overwritten, As.P),
+    true_gifts_chance(CalcTag.rare_overwritten, As.P),
+    true_base_gems_chance(CalcTag.rare_overwritten, As.P),
+    true_t2_items_chance(CalcTag.rare_overwritten, As.P),
+
+    true_fuel_chance(CalcTag.rare_overwritten, As.P),
+    true_idol_token_chance(CalcTag.rare_overwritten, As.P),
+    true_rare_sushi_low_chance(CalcTag.rare_overwritten, As.P),
+    true_mythic_chest_chance(CalcTag.rare_overwritten, As.P),
+    true_Gem_Chest_chance(CalcTag.rare_overwritten, As.P),
+
+    true_Relic_Chest_chance(CalcTag.rare_overwritten, As.P),
+    true_Frogspawn_chance(CalcTag.rare_overwritten, As.P),
+    true_Cosmic_Candy_chance(CalcTag.rare_overwritten, As.P),
+    true_Stickers_chance(CalcTag.rare_overwritten, As.P),
+    
+    true_ButteryLobster_chance(CalcTag.rare_overwritten, As.P),
+    true_rare_sushi_high_chance(CalcTag.rare_overwritten, As.P),
+    true_MEGA_gems_chance(CalcTag.rare_overwritten, As.P),
+    true_forbidden_sushi_chance(CalcTag.rare_overwritten, As.P),
+    
+    true_Skin_chance(CalcTag.rare_overwritten, As.P),
+    true_Gilded_Skin_chance(CalcTag.rare_overwritten, As.P),
+    true_Divine_Chest_chance(CalcTag.rare_overwritten, As.P);
+    
 
 
     public final CalcTag tag;
@@ -215,13 +282,34 @@ public enum Calc {
     public boolean show(){
         if(!tag.show) return false;
         return switch(this){
+            case true_idol_token_chance-> Gift.idol_token.trueChance() != 0.0;
+            case true_star_spawn_chance -> Gift.star_spawn.trueChance() != 0.0;
+            case true_gifts_chance,true_base_gems_chance,true_Skin_chance,
+            true_Gilded_Skin_chance,true_mythic_chest_chance,true_Divine_Chest_chance -> true;
+            case true_t2_items_chance -> Gift.t2_items.trueChance() != 0.0;
+            case true_fuel_chance -> Gift.fuel.trueChance() != 0.0;
+            case true_rare_sushi_low_chance,true_rare_sushi_high_chance -> Gift.rare_sushi_low.trueChance() != 0.0;
+            case true_Gem_Chest_chance -> Gift.Gem_Chest.trueChance() != 0.0;
+            case true_Relic_Chest_chance -> Gift.Relic_Chest.trueChance() != 0.0;
+            case true_Frogspawn_chance -> Gift.Frogspawn.trueChance() != 0.0;
+            case true_Cosmic_Candy_chance -> Gift.Cosmic_Candy.trueChance() != 0.0;
+            case true_Stickers_chance -> Gift.Stickers.trueChance() != 0.0;
+            case true_ButteryLobster_chance -> Gift.ButteryLobster.trueChance() != 0.0;
+            case true_MEGA_gems_chance -> Gift.MEGA_gems.trueChance() != 0.0;
+            case true_forbidden_sushi_chance -> Gift.forbidden_sushi.trueChance() != 0.0;
+
+
+            case slow_obelisk_go_mode,damage_per_obelisk_attack,number_of_obelisk_attack, 
+            true_obelisk_damage,obelisk_go_mode, optimal_attack_time_obelisk 
+            -> getComputedValue(Calc.true_pickaxe_damage) > getComputedValue(Calc.obelisk_armor);
+
             case is_tutorial_done -> Pickaxe.obelisk==-1;
             case true_galactic_floor -> EXPORTSTATS.getRawDouble(Stats.galactic_floor_chance) != 0.0;
             case true_prismatic_floor -> EXPORTSTATS.getRawDouble(Stats.prismatic_floor_chance) != 0.0;
             case true_galactic_floor_multi -> EXPORTSTATS.getRawDouble(Stats.galactic_floor_chance) != 0.0;
             case true_prismatic_floor_multi -> EXPORTSTATS.getRawDouble(Stats.prismatic_floor_chance) != 0.0;
             case true_golden_floor_multi, true_golden_rainbow_floor_multi, true_golden_galactic_floor_multi, true_golden_prismatic_floor_multi -> EXPORTSTATS.getRawDouble(Stats.golden_floor_chance) != 0.0;
-
+            case true_base_gift_chances -> true;
             case zone1_veinseeker, zone2_veinseeker, zone3_veinseeker, zone4_veinseeker, zone5_veinseeker, zone6_veinseeker,
                  zone1_veinseeker_double, zone2_veinseeker_double, zone3_veinseeker_double, zone4_veinseeker_double, zone5_veinseeker_double, zone6_veinseeker_double -> Drones.Veinseeker.grade != 0;
 
@@ -238,13 +326,18 @@ public enum Calc {
 
             case lootbugsWithBearAndLantern, lootbugsWithLantern, lootbugsWithBearAndLantern_cap, lootbugsWithLantern_cap -> EXPORTSTATS.getRawInt(Stats.lootfrogs_caught) != null && EXPORTSTATS.getRawInt(Stats.lootfrogs_caught) > 0;
             case lootbugsWithGoldenLantern, lootbugsWithGoldenLanternAndBear, lootbugsWithGoldenLantern_cap, lootbugsWithGoldenLanternAndBear_cap -> EXPORTSTATS.getRawInt(Stats.lootfrog_lanterns_used) != null && EXPORTSTATS.getRawInt(Stats.lootfrog_lanterns_used) > 25;
+            case lootbugsAlone -> true;
+            case lootbugsAlone_cap -> true;
+            case lootbugsWithBear -> true;
+            case lootbugsWithBear_cap -> true;
 
+            
             case true_big_golden_lootfrogs, true_big_golden_lootfrogs_multi -> EXPORTSTATS.getRawDouble(Stats.lootfrog_big_chance) > 0.0 && EXPORTSTATS.getRawDouble(Stats.lootfrog_golden_chance) > 0.0;
             case true_massive_lootfrogs, true_massive_lootfrogs_multi -> EXPORTSTATS.getRawDouble(Stats.lootfrog_massive_chance) > 0.0;
             case true_massive_golden_lootfrogs, true_massive_golden_lootfrogs_multi -> EXPORTSTATS.getRawDouble(Stats.lootfrog_massive_chance) > 0.0 && EXPORTSTATS.getRawDouble(Stats.lootfrog_golden_chance) > 0.0;
             case medium_additional_lootfrogs -> EXPORTSTATS.getRawDouble(Stats.lootfrog_10x_spawn_chance) > 0.0 || EXPORTSTATS.getRawDouble(Stats.lootfrog_triple_spawn_chance) > 0.0;
 
-            case true_pickaxe_damage -> true;
+            case true_pickaxe_damage, obelisk_armor, obelisk_hp -> true;
 
               case bear_duration_until_max -> !Drones.Bomb_Bear.isMaxGrade() && Pickaxe.obelisk>=18;
               case bear_duration, bear_lootbug_speed_multi -> Pickaxe.obelisk>=18;
@@ -297,17 +390,53 @@ public enum Calc {
 
             case rainbow_veins_rainbow_portal_rainbow_floor -> EXPORTSTATS.getRawDouble(Stats.rainbow_void_portal_chance) > 0.0;
 
-            case expected_stonks_on_max_cap -> EXPORTSTATS.getRawDouble(Stats.stonks_chance) > 1.0;
-            case true_super_stonks, expected_super_stonks_on_max_cap -> EXPORTSTATS.getRawDouble(Stats.super_stonks_chance) > 0.0;
-            case true_ultra_stonks, expected_ultra_stonks_on_max_cap -> EXPORTSTATS.getRawDouble(Stats.ultra_stonks_chance) > 0.0;
+            case true_stonks_gems_amount,true_stonks_chests_amount,true_stonks_relics_amount,expected_stonks_on_max_cap, estimated_time_for_stonks,esperance_time_for_stonks  -> EXPORTSTATS.getRawDouble(Stats.stonks_chance) > 1.0;
+            case true_super_stonks_gems_amount,true_super_stonks_chests_amount,true_super_stonks_relics_amount,true_super_stonks, expected_super_stonks_on_max_cap,estimated_time_for_super_stonks, esperance_time_for_super_stonks -> EXPORTSTATS.getRawDouble(Stats.super_stonks_chance) > 0.0;
+            case true_ultra_stonks_gems_amount,true_ultra_stonks_chests_amount,true_ultra_stonks_relics_amount,true_ultra_stonks, expected_ultra_stonks_on_max_cap,estimated_time_for_ultra_stonks,esperance_time_for_ultra_stonks -> EXPORTSTATS.getRawDouble(Stats.ultra_stonks_chance) > 0.0;
             case true_super_stonks_multi -> EXPORTSTATS.getRawDouble(Stats.super_stonks_multi) > 0.0;
             case true_ultra_stonks_multi -> EXPORTSTATS.getRawDouble(Stats.ultra_stonks_multi) > 0.0;
 
             case base_high_gems_gift_min, base_high_gems_gift_max -> Pickaxe.obelisk >= 60;
 
             case cherry_charge_gift_min, cherry_charge_gift_max -> Pickaxe.getWorld()>=3;
+            case Obelisk -> true;
+            case X100_gift_per_freebie_cap -> true;
+            case base_high_chest_gift_max -> true;
+            case base_high_chest_gift_min -> true;
+            case base_low_chest_gift_max -> true;
+            case base_low_chest_gift_min -> true;
+            case base_low_gems_gift_max -> true;
+            case base_low_gems_gift_min -> true;
+            case base_med_gems_gift_max -> true;
+            case base_med_gems_gift_min -> true;
+            case skill_gift_min, skill_gift_max -> true;
+            case estimated_time_for_X100_gifts,esperance_time_for_X100_gifts -> true;
+            case fuel_gift_max -> true;
+            case fuel_gift_min -> true;
+            case gift_per_freebie_cap -> true;
             
-            default -> true;
+            case rare_gems_gift_max -> true;
+            case rare_gems_gift_min -> true;
+
+        
+            case star_chance_per_floor -> true;
+            case super_star_chance_per_floor -> true;
+            case true_star_per_floor -> true;
+            case true_super_star_per_floor -> true;
+            case void_portal_perma -> true;
+            case world -> true;
+            case zone1_vein -> true;
+            case zone1_vein_double -> true;
+            case zone2_vein -> true;
+            case zone2_vein_double -> true;
+            case zone3_vein -> true;
+            case zone3_vein_double -> true;
+            case zone4_vein -> true;
+            case zone4_vein_double -> true;
+            case zone5_vein -> true;
+            case zone5_vein_double -> true;
+            case zone6_vein -> true;
+            case zone6_vein_double -> true;            
         };
     }
 
@@ -321,6 +450,7 @@ public enum Calc {
     }
 
     private double getComputedValue(Calc calc) {
+        
         Object value = EXPORTSTATS.getCalc(calc);
         if (value instanceof Number number) return number.doubleValue();
         return 0.0;
@@ -337,29 +467,30 @@ public enum Calc {
                 if(this.name().startsWith(drone.smallName+"_") || this.name().startsWith(drone.name())){
                     int currentGrade = drone.grade;
 
-                    // 1. XP NÉCESSAIRE jusqu'au max
                     if (this.name().contains("experience_until_max")) {
                         return drone.getUntilGrade(currentGrade, drone.maxGrade);
                     } 
                     
-                    // 2. TEMPS (DURÉE) NÉCESSAIRE jusqu'au max (en secondes)
                     else if (this.name().contains("duration_until_max")) {
                         return drone.durationUntilGrade(currentGrade, drone.maxGrade, false);
                     } 
                     
-                    // 3. DURÉE DE CARBURANT DU GRADE ACTUEL
                     else if (this.name().contains("duration")) {
                         return drone.getFuelDurationAtGrade(currentGrade);
                     }
                 }
             }
+        
             
+
         switch(this){
-            default:
-                System.out.println("Unknown calculation for: " + this.name());
-                return null;
+            case elixir_duration_until_max, elixir_duration, elixir_experience_until_max, bear_duration,bear_duration_until_max,bear_experience_until_max,
+            chain_duration, chain_duration_until_max, chain_experience_until_max, frogger_duration,frogger_duration_until_max,frogger_experience_until_max, midas_duration,
+            midas_duration_until_max,midas_experience_until_max, veinseeker_duration, veinseeker_duration_until_max,veinseeker_experience_until_max,void_duration,void_duration_until_max,
+            void_experience_until_max, prism_duration,prism_duration_until_max,prism_experience_until_max,minotaur_duration,minotaur_duration_until_max,minotaur_experience_until_max,
+            angler_duration, angler_duration_until_max,angler_experience_until_max,starburst_duration,starburst_duration_until_max,starburst_experience_until_max: return null;
             case zone1_vein:
-            return Drones.veinChance(0, false, 0) * 100;
+                return Drones.veinChance(0, false, 0) * 100;
             case zone1_vein_double:
                 return Drones.veinChance(0, true, 0) * 100;
             case zone1_veinseeker:
@@ -438,6 +569,12 @@ public enum Calc {
                 return Drones.veinChance(40, false, 8) * 100;
             case world4_veinseeker_double:
                 return Drones.veinChance(40, true, 8) * 100;
+            case optimal_attack_time_obelisk:
+                return (60*20*EXPORTSTATS.getRawDouble(Stats.obelisk_cooldown_multi))-(EXPORTSTATS.getRawDouble(Stats.obelisk_timer_add)*30);
+            case obelisk_go_mode:
+                return (getComputedValue(Calc.number_of_obelisk_attack))*(EXPORTSTATS.getRawDouble(Stats.obelisk_timer_add)*30)+getComputedValue(Calc.optimal_attack_time_obelisk);
+            case slow_obelisk_go_mode:
+                return (getComputedValue(Calc.number_of_obelisk_attack))*(EXPORTSTATS.getRawDouble(Stats.obelisk_timer_add)*30)+(getComputedValue(Calc.optimal_attack_time_obelisk)*1.35);
             case lootbugsAlone_cap:
                 return ((int) EXPORTSTATS.getRaw(Calc.lootbugsAlone))*EXPORTSTATS.getRawInt(Stats.lootbug_bank_cap);
             case lootbugsWithBear_cap:
@@ -452,33 +589,70 @@ public enum Calc {
                 return ((int) EXPORTSTATS.getRaw(Calc.lootbugsWithGoldenLantern))*EXPORTSTATS.getRawInt(Stats.lootbug_bank_cap);
             case lootbugsWithGoldenLanternAndBear_cap:
                 return ((int) EXPORTSTATS.getRaw(Calc.lootbugsWithGoldenLanternAndBear))*EXPORTSTATS.getRawInt(Stats.lootbug_bank_cap);
+            case X100_gift_per_freebie_cap:
+                return Pickaxe.bigGiftsPercent()*EXPORTSTATS.getRawInt(Stats.freebie_bank_cap);
+            case estimated_time_for_X100_gifts:
+                return (int) (Math.log(1 - 0.95) / Math.log(1 - (Pickaxe.bigGiftsPercent()))*EXPORTSTATS.getRawInt(Stats.freebie_cooldown_seconds));
+            case esperance_time_for_X100_gifts:
+                return (int) ((1.0 / Pickaxe.bigGiftsPercent())*EXPORTSTATS.getRawInt(Stats.freebie_cooldown_seconds));
+            case gift_per_freebie_cap:
+                return Pickaxe.giftsPercent()*EXPORTSTATS.getRawInt(Stats.freebie_bank_cap);
             
             case lootbugsAlone:
                 return Drones.lootbugSpeed(false);
-        
             case lootbugsWithBear:
                 return Drones.lootbugSpeed(true);
-            
             case lootbugsWithBearAndLantern:
                 return Drones.lootbugSpeedGoldenLantern(true, false);
-            
             case lootbugsWithLantern:
                 return Drones.lootbugSpeedGoldenLantern(false, false);
-            
             case lootbugsWithGoldenLantern:
                 return Drones.lootbugSpeedGoldenLantern(false, true);
-            
             case lootbugsWithGoldenLanternAndBear:
                 return Drones.lootbugSpeedGoldenLantern(true, true);
-            
             case expected_stonks_on_max_cap:
                 return EXPORTSTATS.getRawInt(Stats.freebie_bank_cap)*(EXPORTSTATS.getRawDouble(Stats.stonks_chance)/100.0);
             case expected_super_stonks_on_max_cap:
                 return EXPORTSTATS.getRawInt(Stats.freebie_bank_cap)*(getComputedValue(Calc.true_super_stonks)/100.0);
             case expected_ultra_stonks_on_max_cap:
                 return EXPORTSTATS.getRawInt(Stats.freebie_bank_cap)*(getComputedValue(Calc.true_ultra_stonks)/100.0);
+            case estimated_time_for_stonks:
+                return (int) (Math.log(1 - 0.95) / Math.log(1 - (EXPORTSTATS.getRawDouble(Stats.stonks_chance)/100.0))*EXPORTSTATS.getRawInt(Stats.freebie_cooldown_seconds));
+            case estimated_time_for_super_stonks:
+                return (int) (Math.log(1 - 0.95) / Math.log(1 - (getComputedValue(Calc.true_super_stonks)/100.0))*EXPORTSTATS.getRawInt(Stats.freebie_cooldown_seconds));
+            case estimated_time_for_ultra_stonks:
+                return (int) (Math.log(1 - 0.95) / Math.log(1 - (getComputedValue(Calc.true_ultra_stonks)/100.0))*EXPORTSTATS.getRawInt(Stats.freebie_cooldown_seconds));
+            case esperance_time_for_ultra_stonks:
+                return (int) ((1.0 / (getComputedValue(Calc.true_ultra_stonks)/100.0)))*EXPORTSTATS.getRawInt(Stats.freebie_cooldown_seconds);
+            case esperance_time_for_super_stonks:
+                return (int) ((1.0 / (getComputedValue(Calc.true_super_stonks)/100.0)))*EXPORTSTATS.getRawInt(Stats.freebie_cooldown_seconds);
+            case esperance_time_for_stonks:
+                return (int) ((1.0 / (EXPORTSTATS.getRawDouble(Stats.stonks_chance)/100.0)))*EXPORTSTATS.getRawInt(Stats.freebie_cooldown_seconds);
             case true_pickaxe_damage:
                 return Pickaxe.trueDamage();
+
+            case true_ultra_stonks_gems_amount:
+                return Math.ceil(200 * getComputedValue(Calc.true_ultra_stonks_multi));
+            case true_ultra_stonks_relics_amount:
+                return Math.ceil(10 * getComputedValue(Calc.true_ultra_stonks_multi));
+            case true_ultra_stonks_chests_amount:
+                return Math.ceil(20 * getComputedValue(Calc.true_ultra_stonks_multi));
+
+            case true_super_stonks_gems_amount:
+                return Math.ceil(200 * getComputedValue(Calc.true_super_stonks_multi));
+            case true_super_stonks_relics_amount:
+                return Math.ceil(10 * getComputedValue(Calc.true_super_stonks_multi));
+            case true_super_stonks_chests_amount:
+                return Math.ceil(20 * getComputedValue(Calc.true_super_stonks_multi));
+
+            case true_stonks_gems_amount:
+                return Math.ceil(200 * EXPORTSTATS.getRawDouble(Stats.stonks_multi));
+            case true_stonks_relics_amount:
+                return Math.ceil(10 * EXPORTSTATS.getRawDouble(Stats.stonks_multi));
+            case true_stonks_chests_amount:
+                return Math.ceil(20 * EXPORTSTATS.getRawDouble(Stats.stonks_multi));
+
+                
             case void_portal_perma:
                 return (Double) EXPORTSTATS.getRaw(Stats.void_portal_chance) == 0.0?0.4:(Double) EXPORTSTATS.getRaw(Stats.void_portal_chance)/100.0;
             case medium_additional_lootfrogs:
@@ -524,6 +698,26 @@ public enum Calc {
                 if (chance == null || spawnMulti == null) return 0.0;
                 return (chance/100.0)*(spawnMulti/100.0)*100.0;
             }
+            case true_gifts_chance:return Gift.gifts.trueChance();
+            case true_base_gems_chance:return Gift.base_gems.trueChance();
+            case true_Skin_chance:return Gift.Skin.trueChance();
+            case true_Gilded_Skin_chance:return Gift.Gilded_Skin.trueChance();
+            case true_mythic_chest_chance:return Gift.mythic_chest.trueChance();
+            case true_Divine_Chest_chance: return Gift.Divine_Chest.trueChance();
+            case true_t2_items_chance: return Gift.t2_items.trueChance();
+            case true_idol_token_chance:return Gift.idol_token.trueChance();
+            case true_star_spawn_chance:return Gift.star_spawn.trueChance();
+            case true_fuel_chance: return Gift.fuel.trueChance();
+            case true_rare_sushi_low_chance: return Gift.rare_sushi_low.trueChance();
+            case true_rare_sushi_high_chance: return Gift.rare_sushi_high.trueChance();
+            case true_Gem_Chest_chance: return Gift.Gem_Chest.trueChance();
+            case true_Relic_Chest_chance: return Gift.Relic_Chest.trueChance();
+            case true_Frogspawn_chance: return Gift.Frogspawn.trueChance();
+            case true_Cosmic_Candy_chance: return Gift.Cosmic_Candy.trueChance();
+            case true_Stickers_chance: return Gift.Stickers.trueChance();
+            case true_ButteryLobster_chance: return Gift.ButteryLobster.trueChance();
+            case true_MEGA_gems_chance: return Gift.MEGA_gems.trueChance();
+            case true_forbidden_sushi_chance: return Gift.forbidden_sushi.trueChance();
             case Obelisk:
                 return Pickaxe.obelisk;
             case is_tutorial_done:
@@ -541,44 +735,58 @@ public enum Calc {
                 double floorChance = (Double) getComputedValue(Calc.true_star_per_floor) / 100.0;
                 return 12500 / (chance* floorChance);
             case base_low_chest_gift_min:
-                return 3*(1+Pickaxe.obelisk*0.08);
+                return Gift.low_relic.howMuch(false);
             case base_low_chest_gift_max:
-                return 5*(1+Pickaxe.obelisk*0.08);
+                return Gift.low_relic.howMuch(true);
             case base_high_chest_gift_min:
-                return 5*(1+Pickaxe.obelisk*0.08);
+                return Gift.high_relic.howMuch(false);
             case base_high_chest_gift_max:
-                return 10*(1+Pickaxe.obelisk*0.08);
-
+                return Gift.high_relic.howMuch(true);
+            case obelisk_hp:
+                return Pickaxe.getObLife();
+            case obelisk_armor:
+                return Pickaxe.getObArmor();
+            case skill_gift_min:
+                return Gift.skill_shard.howMuch(false);
+            case skill_gift_max:
+                return Gift.skill_shard.howMuch(true);
             case base_low_gems_gift_max:
-                return 40*(1+Pickaxe.obelisk*0.08);
+                return Gift.low_gems.howMuch(true);
             case base_med_gems_gift_min:
             case base_low_gems_gift_min:
-                return 20*(1+Pickaxe.obelisk*0.08);
+                return Gift.low_gems.howMuch(false);
             case base_med_gems_gift_max:
-                return 50*(1+Pickaxe.obelisk*0.08);
+                return Gift.mid_gems.howMuch(true);
             case base_high_gems_gift_min:
-                return 90*(1+Pickaxe.obelisk*0.08);
+                return Gift.high_gems.howMuch(false);
             case base_high_gems_gift_max:
-                return 150*(1+Pickaxe.obelisk*0.08);
+                return Gift.high_gems.howMuch(true);
             case rare_gems_gift_min:
-                return 80*(1+Pickaxe.obelisk*0.08);
+                return Gift.base_gems.howMuch(false);
             case rare_gems_gift_max:
-                return 130*(1+Pickaxe.obelisk*0.08);
+                return Gift.base_gems.howMuch(true);
             case cherry_charge_gift_min:
-                return 1500*((Pickaxe.obelisk-36)/6);
+                return Gift.cherry_bomb.howMuch(false);
             case cherry_charge_gift_max:
-                return 2750*((Pickaxe.obelisk-36)/6);  
+                return Gift.cherry_bomb.howMuch(true);
             case fuel_gift_min:
-                return 2*Math.max(18, Pickaxe.obelisk)-5;
+                return Gift.fuel.howMuch(false);
             case fuel_gift_max:
-                return 2*Math.max(18, Pickaxe.obelisk)+15;
+                return Gift.fuel.howMuch(true);
             case rainbow_veins_rainbow_portal_rainbow_floor:
                 return ((getComputedValue(Calc.true_rainbow_void_portal)/100.0) * (EXPORTSTATS.getRawDouble(Stats.rainbow_floor_chance)/100.0) * (getComputedValue(Calc.true_rainbow_vein)/100.0))*100;
             case true_galactic_floor:
                 base = ((Double) EXPORTSTATS.getRaw(Stats.rainbow_floor_chance)) / 100.0
                     * ((Double) EXPORTSTATS.getRaw(Stats.galactic_floor_chance)) / 100.0;
                 return base * 100;
-            
+            case damage_per_obelisk_attack:
+                double second_damage = getComputedValue(Calc.true_obelisk_damage)*EXPORTSTATS.getRawDouble(Stats.pickaxe_attack_speed_per_second);
+                return second_damage*(EXPORTSTATS.getRawDouble(Stats.obelisk_timer_add)*30);
+            case number_of_obelisk_attack:
+                double attack_damage = getComputedValue(Calc.damage_per_obelisk_attack);
+                return getComputedValue(Calc.obelisk_hp)/attack_damage;
+            case true_obelisk_damage:
+                return getComputedValue(Calc.true_pickaxe_damage)-getComputedValue(Calc.obelisk_armor);
             case true_prismatic_floor:
                 base = getComputedValue(Calc.true_galactic_floor) / 100.0
                     * ((Double) EXPORTSTATS.getRaw(Stats.prismatic_floor_chance)) / 100.0;
@@ -735,7 +943,10 @@ public enum Calc {
                 base = ((Double) EXPORTSTATS.getRaw(Stats.ultra_stonks_multi)) * getComputedValue(Calc.true_super_stonks_multi);
                 base /= 100.0;
                 return base * 100;
+            case true_base_gift_chances:
+                return Gift.high_relic.trueChance()*100;
             } 
+            return null;
             
     }
 }
